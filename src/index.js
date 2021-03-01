@@ -9,7 +9,7 @@ import reducer from './reducers/headlines-reducer';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 
-const store = createStore(reducer, applyMiddleware(thunkMiddleware, middlewareLogger));
+const store = createStore(reducer, applyMiddleware(thunkMiddleware, middlewareLogger)); //add a second argument to createStore(). This second argument is the applyMiddleware() function, which in turn takes an argument - the middleware we want to apply to the store. As we can see here, we can pass in multiple pieces of middleware
 
 ReactDOM.render(
   <Provider store={store}>
